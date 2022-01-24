@@ -1,0 +1,108 @@
+@import "./variables";
+@import "./responsive";
+
+.services{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 7rem 10rem 7rem;
+
+    @include mobile{
+        margin: 5rem 5rem 10rem 5rem;
+    }
+
+    .s-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+        text-align: center;
+
+        h3{
+            font-size: $title;
+            font-weight: 600;
+            margin-bottom: 2rem;
+
+            @include laptop{
+                font-size: 3.5rem;
+            }
+        }
+
+        p{
+            font-size: $p;
+            color: $gray;
+            margin-bottom: 2rem;
+
+            @include mobile{
+                font-size: $text;
+            }
+
+        }
+    }
+
+    .s-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4rem;
+
+        @include large{
+            flex-direction: column;
+        }
+    }
+  
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .row{
+        display: flex;
+
+        @include tablet{
+            flex-direction: column;
+        }
+
+        .col{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+
+            i{
+                font-size: $subtitle;
+                color: $main-color;
+            }
+            
+            h3{
+                font-size: $p;
+                font-weight: 600;
+            }
+
+            p{
+                font-size: $text;
+                color: $dark-gray;
+            }
+        }
+    }
+}
+
+
+.s-img{
+    width: 45%;
+    margin-left: 1rem;
+
+    @include large{
+        margin-top: 5rem;
+    }
+
+    @include tablet{
+        width: 60%;
+    }
+
+    img{
+        width: 100%;
+    }
+}

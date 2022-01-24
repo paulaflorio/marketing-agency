@@ -1,0 +1,119 @@
+@import "./variables";
+@import "./responsive";
+
+.contact{
+    margin: 5rem 7rem 10rem 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile{
+        margin: 5rem 5rem 10rem 5rem;
+    }
+
+    .c-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+        text-align: center;
+
+        h3{
+            font-size: $title;
+            font-weight: 600;
+            margin-bottom: 2rem;
+
+            @include laptop{
+                font-size: 3.5rem;
+            }
+
+        }
+
+        p{
+            font-size: $p;
+            color: $gray;
+            margin-bottom: 2rem;
+
+            @include mobile{
+                font-size: $text;
+            }
+
+
+        }
+        
+    }
+
+}
+
+.form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet{
+        width: 90%;
+    }
+
+    @include mobile{
+        width: 100%;
+    }
+
+    .f-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 3rem;
+
+        @include tablet{
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        input{
+            width: 47%;
+            border: 1px solid #cbced1;
+            border-radius: 0.313rem;
+            height: 4rem;
+            font-size: $text;
+            outline: none;
+            padding: 1.5rem;
+
+            @include tablet{
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    textarea{
+        width: 100%;
+        border: 1px solid #cbced1;
+        border-radius: 0.313rem;
+        padding: 1.5rem;
+        font-size: $text;
+        font-family: 'Poppins', sans-serif;
+        resize: none;
+        outline: none;
+        padding-top: 1rem;
+        color: #6c6c6c;
+    }
+
+    button{
+        font-size: $text;
+        font-weight: 700;
+        color: #fff;
+        padding: 1rem 2.3rem;
+        text-align: center;
+        background: linear-gradient(-90deg, #dd2476, #ff512f);
+        border-radius: 3rem;
+        transition: .6s ease-out;
+        border: none;
+        cursor: pointer;
+        width: 15rem;
+        margin-top: 3rem;
+    }
+}

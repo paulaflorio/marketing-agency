@@ -1,0 +1,107 @@
+@import "./variables";
+@import "./responsive";
+
+footer{
+    padding: 7rem;
+    background-color:  #ffdbd4;
+
+    .row-one{
+        display: flex;
+        align-items: center;
+
+        a{
+            font-size: $p;
+            color:$gray;
+            margin: 0 .7rem;
+        }
+    }
+
+    .second-row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+        .col{
+            display: flex;
+            flex-direction: column;
+
+            @include mobile{
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            h4{
+                color: $gray;
+                margin: 2rem 0;
+                font-size: $text;
+            }
+
+            a{
+                color: $black;
+                font-weight: 500;
+                font-size: $text;
+
+                &:hover{
+                    color: $main-color;
+                }
+            }
+
+            p{
+                font-size: $text;
+                color: $black;
+                font-weight: 500;
+
+            }
+
+        }
+    }
+}
+
+.news{
+    max-width: 30rem;
+
+    .newsletter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 2rem 0;
+
+        input{
+            width: 100%;
+            border-radius: 3rem;
+            height: 4rem;
+            background-color:rgba(33,33,33,0.12);
+            font-size: $text;
+            font-weight: 500;
+            padding: 0 1.5rem;
+            border:none;
+            outline: none;
+
+            &::placeholder{
+                opacity: 1;
+                color: #6c6c6c;
+            }
+        }
+
+        button{
+            position:absolute;
+            border: none;
+            color: $black;
+            background-color:#e2e1e1;
+            bottom: 0;
+            right: 0;
+            height: 4rem;
+            width: 4rem;
+            border-radius:0 3rem 3rem 0;
+            font-size: $p;
+            cursor: pointer;
+        }
+
+    
+    }
+}
